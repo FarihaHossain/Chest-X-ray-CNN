@@ -10,25 +10,18 @@ Original file is located at
 #%tensorflow_version 2.0
 from PIL import ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
-import numpy as np
 import tensorflow as tf
-import h5py
+
 import keras
 from keras import backend as K
 from keras import layers
-from keras.layers import Input, Multiply,GlobalAveragePooling2D, Add, Dense, Activation, Maximum, ZeroPadding2D, BatchNormalization, Flatten, Conv2D, AveragePooling2D, MaxPooling2D, GlobalMaxPooling2D, Lambda, UpSampling2D, DepthwiseConv2D
+from keras.layers import Input, Multiply, Add, Dense, Activation, Maximum, ZeroPadding2D, BatchNormalization,Conv2D, MaxPooling2D,DepthwiseConv2D,SeparableConv2D
 from keras.models import Model, load_model
-from keras.preprocessing import image
-from keras.utils import layer_utils
-from keras.utils.data_utils import get_file
-from keras.applications.imagenet_utils import preprocess_input
-from keras.models import Sequential
 from keras.layers.core import Dense, Flatten, Dropout
-from keras.optimizers import Adam, SGD
+from keras.optimizers import Adam
 from keras.metrics import categorical_crossentropy
 from keras.preprocessing.image import ImageDataGenerator
 from keras.layers.normalization import BatchNormalization
-from keras.utils.vis_utils import model_to_dot
 from keras.utils import plot_model
 from keras.initializers import glorot_uniform
 from keras.layers.convolutional import *
@@ -45,7 +38,6 @@ import sys
 import gc
 from IPython.display import SVG
 import scipy.misc
-from matplotlib.pyplot import imshow
 print (keras.__version__)
 print (tf.__version__)
 
