@@ -9,8 +9,6 @@ Original file is located at
 
 from keras.preprocessing.image import ImageDataGenerator
 
-from keras.preprocessing.image import ImageDataGenerator
-
 def Chest_XRay(batch_size,image_size,data_dir):
 
     '''
