@@ -13,21 +13,32 @@ def  plot_loss_acc(history):
     loss = history.history['loss']
     val_loss = history.history['val_loss']
     epochs = range(len(loss))
-    plt.plot(epochs, loss, 'bo')
-    plt.plot(epochs, val_loss, 'g')
+    plt.plot(epochs, loss, 'rv')
+    plt.plot(epochs, val_loss, 'y')
     plt.title('Training and validation loss')
     plt.legend(['train', 'val'], loc='upper right')
-    filename= 'xcep_pneu_loss.png'
+    if snapshot_name == None:
+        filename= 'SPNet_loss.png'
+    else:
+        filename= snapshot_name+'_loss.png'
     plt.savefig(filename)
     plt.show()
+	
     
     acc = history.history['accuracy']
     val_acc = history.history['val_accuracy']
     epochs = range(len(acc))
-    plt.plot(epochs, acc, 'b')
-    plt.plot(epochs, val_acc, 'g')
+    plt.plot(epochs, acc, 'k')
+    plt.plot(epochs, val_acc, 'c')
     plt.title('Training and validation accuracy')
     plt.legend(['train', 'val'], loc='lower right')
-    filename= 'xcep_pneu_accuracy.png'
+    if snapshot_name == None:
+        filename= 'SPNet_accuracy.png'
+    else:
+        filename= snapshot_name+'_accuracy.png'
     plt.savefig(filename)
+    plt.show()
+	
+	
+	plt.savefig(filename)
     plt.show()
