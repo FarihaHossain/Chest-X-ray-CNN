@@ -9,7 +9,7 @@ Original file is located at
 
 import matplotlib.pyplot as plt
 
-def  plot_loss_acc(history):
+def  plot_loss_acc(history,snapshot_name):
     loss = history.history['loss']
     val_loss = history.history['val_loss']
     epochs = range(len(loss))
@@ -37,8 +37,4 @@ def  plot_loss_acc(history):
     else:
         filename= snapshot_name+'_accuracy.png'
     plt.savefig(filename)
-    plt.show()
-	
-	
-	plt.savefig(filename)
     plt.show()

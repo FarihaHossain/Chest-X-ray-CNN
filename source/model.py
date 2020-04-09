@@ -111,7 +111,7 @@ def spa_pooling(X, num_channel, base):
   return X  
 
 
-def SPANet(img_size=224,channels=3):
+def SPANet(img_size=224,channels=3,num_cls=2):
  
     input_shape = (img_size,img_size,channels)
     X_input= Input(input_shape)
@@ -136,7 +136,7 @@ def SPANet(img_size=224,channels=3):
     #X = Dropout(0.2)(X)
     X = Dense(16, name='Dense_2')(X)
     #X = Dropout(0.2)(X)
-    X = Dense(2, name='Dense_3')(X)
+    X = Dense(num_cls, name='Dense_3')(X)
     Output = Activation('softmax', name='classifier')(X)
        
    # predictions = Dense(2, activation='softmax')(X)
