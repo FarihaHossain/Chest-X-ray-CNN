@@ -18,13 +18,7 @@ def callback_for_training(tf_log_dir_name='./log/',patience_lr=10,snapshot_name=
     cb[0]= tb
    
     
-    """
-    Early Stopping callback
-    """
-    #Uncomment for usage
-    # early_stop = callbacks.EarlyStopping(monitor='val_acc', min_delta=0, patience=5, verbose=1, mode='auto',save_best_only=True)
-    # cb.apppend(early_stop)
-    
+  
     """
     Model Checkpointer
     """
