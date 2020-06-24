@@ -1,8 +1,6 @@
 # Chest-X-ray-CNN
 
-A classification model using Covolutional Neural Network for pneumonia
-
-different Retinal Diseases using Deep Learning from Optical Coherence Tomography Images. This code is part of the supplementary materials for the IEEE ICMLA 2019 for our paper Optic-net: A Novel Convolutional Neural Network for Diagnosis of Retinal Diseases from Optical Tomography Images. The paper has since been accpeted to IEEE ICMLA 2019 and will be preseneted in December 2019.
+A classification model using Covolutional Neural Network for pneumonia detection. 
 
 
 Pre-requisite
@@ -52,6 +50,8 @@ sudo pip3 install keras==2.2.4
     Install packages from requirements.txt
 
 sudo pip3 -r requirements.txt
+
+
 
 
 
